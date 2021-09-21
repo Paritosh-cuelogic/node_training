@@ -1,0 +1,22 @@
+h1= 'Create new user'
+form(action="/users", method="post") 
+    div 
+        label(for="firstName") First Name : 
+        input(type="text" name="firstName" id="firstName")
+    br
+    div 
+        label(for="lastName") Last Name : 
+        input(type="text" name="lastName" id="flastName")
+    br
+    div 
+        label(for="age") Age : 
+        input(type="number" name="age" id="age")
+    br
+    div 
+        label(for="isActive") Is Active : 
+        select(name="isActive")
+            option(value="1") Yes 
+            option(value="0") No
+    br
+    div 
+        input(type="submit" name="submit" value="Add")   

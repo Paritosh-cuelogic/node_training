@@ -1,0 +1,18 @@
+extends layout 
+
+block content
+    h1 List of register users
+    a(href="/") Go Back
+    br
+    table(border="1px", width="100%")
+        tr 
+            th First Name 
+            th Last Name 
+            th Age 
+            th Is Active        
+        each user in users
+            tr
+                td= user.firstName
+                td= user.lastName
+                td= user.age 
+                td #{user.isActive ? 'Active' : "In Active"}
